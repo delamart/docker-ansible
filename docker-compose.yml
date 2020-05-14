@@ -1,0 +1,10 @@
+version: "3"
+
+services: 
+  ansible-playbook:
+    build: .
+    container_name: ansible-playbook
+    volumes: 
+      - ./:/ansible
+    environment: 
+      ANSIBLE_CONFIG: /ansible/ansible.cfg
